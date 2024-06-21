@@ -20,7 +20,7 @@ def bersihkan_teks(teks):
     teks_bersih = re.sub(r'https\S+', '', teks_bersih)
     teks_bersih = re.sub(r'Simak breaking news berita pilihan langsung ponselmu. Pilih saluran andalanmu akses berita Kompas\.com WhatsApp Channel Pastikan install aplikasi WhatsApp ya\.', '', teks_bersih)
     return teks_bersih
-
+    
 def summarize_text(text):
     # Tokenisasi kalimat
     sentences = nltk.sent_tokenize(text)
@@ -47,7 +47,7 @@ def summarize_text(text):
 
     return summary
 
-data = pd.read_excel("D:/PENAMBANGAN TEKS/GUI-UASTM/KompasCrawlData.xlsx")
+data = pd.read_excel("KompasCrawlData.xlsx")
 df = pd.DataFrame(data)
 st.write(df)
 # Buat input text field untuk kata kunci pencarian
