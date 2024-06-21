@@ -10,6 +10,9 @@ from nltk.corpus import stopwords
 from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 
+nltk.download('punkt')
+nltk.download('stopwords')
+
 label_encoder = LabelEncoder()
 
 tokenizer = BertTokenizer.from_pretrained("indobenchmark/indobert-base-p1")
